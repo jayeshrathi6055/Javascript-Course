@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manual animation</h1>
+    <form action="">
+        <img src="photo_editors.PNG" alt="photo of editor" id="myimage">
+        <p>Click the button for animation.</p>
+        <button onclick="moveRight()">Animation</button>
+    </form>
+
+    <h1>Automatic animation</h1>
+    <img src="photo_editors.PNG" alt="photo of editor" id="myimage2">
+    <p>Click the button below for animation.</p>
+    <button onclick="moveRightauto()">Start</button>
+    <button onclick="Stop()">Stop</button>
+</body>
+<script>
+    imgobj = null
+    function init(){
+        console.log("hello sir")
+        imgobj = document.getElementById("myimage")
+        imgobj.style.position = "relative"
+        imgobj.style.left = "10px"
+    }
+    function moveRight(){
+        imgobj.style.left = parseInt(imgobj.style.left) + 10 + "px"
+    }
+
+
+    var animation , obj = null
+    function init2(){
+        obj = document.getElementById("myimage2")
+        obj.style.position = "relative"
+        obj.style.left = "0px"
+    }
+    function moveRightauto(){
+        obj.style.left = parseInt(obj.style.left) + 10 + "px"
+        animation = setTimeout(moveRightauto,20)
+    }
+    function Stop(){
+        clearTimeout(animation)
+        obj.style.left = "0px"
+    }
+    // onload = init
+    onload = init2
+</script>
+</html>
