@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to see the result.</p>
+    <form action="">
+        <button onclick="error_handling()">Click me</button>
+    </form>
+
+    <p>Input a number between 5 and 10.</p>
+    <form action="">
+        <label for="error">Enter value</label>
+        <input type="text" id="demo">
+        <button onclick="Throw()">Submit</button>
+        <p id="message"></p>
+    </form>
+</body>
+<script>
+    // Handling errors in Java script------------------------------------------>
+    function error_handling(){
+        a = 100
+        // a1 = 100
+        try{
+            x = Number(a)
+            alert ("The value is "+a)
+        }
+        catch(e){
+            alert("Error "+e.description)
+        }
+        finally{
+            alert ("Finally block will always excecute!")
+        }
+    }
+
+    // Use of Throw---------------------------------------------------------------->
+    function Throw(){
+        m = document.getElementById('message')
+        m.innerHTML = ""
+        x = document.getElementById('demo').value
+
+        try{
+            if(x == "") throw "is empty"
+            if(isNaN(x)) throw "is not a number"
+            x = Number(x)
+            if(x>10) throw "is too high"
+            if(x<5) throw "is too low"
+        }
+        catch(err){
+            m.innerHTML = "Input "+err
+        }
+        finally{
+            document.getElementById('demo').value = ""
+        }
+    }
+</script>
+</html>
