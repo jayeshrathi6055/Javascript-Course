@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Image map</h1>
+    <img src="javascript.jpg" alt="photo of editors name" usemap="#editors" width="400" height="400">
+    <map name="editors">
+        <area shape="rect" coords="0,0,200,700" onmouseover="writeText('This is a editors name')" href="welcome.html"
+         alt="editors name" target="_blank">
+    </map>
+    <p id="note"></p>
+</body>
+<script>
+    function writeText(text){
+        document.getElementById("note").innerHTML = text
+    }
+</script>
+</html>

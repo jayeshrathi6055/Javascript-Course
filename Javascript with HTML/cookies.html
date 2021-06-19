@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Cookies in html</h1>
+
+    <h2>Create cookie</h2>
+    <form action="" name="myform">
+        <b>Enter cookie:</b><input type="text" name="cook">
+        <input type="button" value="set cookie" onclick="Writecookie()">
+        <input type="button" value="get cookie" onclick="Readcookie()">
+    </form>
+</body>
+<script>
+    function Writecookie(){
+        // Set cookie
+        var cookievalue = escape(document.myform.cook.value)
+        document.cookie = "name = "+cookievalue
+
+        // Set expire date of cookie
+        var now = new Date();
+        now.getMonth(now.setMonth+1)
+        document.cookie = "expires = "+now.toUTCString();
+
+        alert("Cookie created...")
+        alert("The value of cookie = "+cookievalue)
+        alert("Expire date is - "+now)
+    }
+    function Readcookie(){
+        var allcookie = document.cookie
+        console.log(document.cookie)
+        
+        cookiearray = allcookie.split(";")
+        console.log(cookiearray)
+
+        for(i = 0;i<cookiearray.length;i++){
+            name = cookiearray[i].split("=")[0]
+            value = cookiearray[i].split("=")[1]
+            document.write("Key is "+name+" and value is "+value+"<br>")
+        }
+    }
+</script>
+</html>
