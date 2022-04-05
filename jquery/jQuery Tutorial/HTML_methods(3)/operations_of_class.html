@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Operations of classes</title>
+  </head>
+  <body>
+    <div class="parent">
+      <p>This is it.</p>
+    </div>
+    <input type="text" placeholder="Enter your Name - " class="text"/>
+
+    <!-- Scripts -->
+    <script>
+        // Get Value of elements ---------------------------->
+        // addClass(className) - it can add class in an element
+        // removeClass(className) - it can remove class in an element
+        // toggleClass(className) - it can add/remove class in an element
+        
+      function addClassElement() {
+        $("p").addClass("child");
+      }
+      function removeClassElement() {
+        $("input").removeClass("text");
+      }
+      function toggleClassElement() {
+        $("div").toggleClass("parent");
+      }
+
+      addClassElement()
+      removeClassElement()
+      toggleClassElement()
+
+    </script>
+  </body>
+</html>

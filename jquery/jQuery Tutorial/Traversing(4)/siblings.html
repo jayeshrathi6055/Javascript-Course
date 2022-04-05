@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Traversal between Siblings</title>
+  </head>
+  <body>
+    <section class="parent">
+      <h1>Hello</h1>
+      <p>This is hello text</p>
+      <div class="secondParent">
+          <h2>Second Hello</h2>
+        <div class="thirdParent">
+          <p class="child">Traversal between Siblings</p>
+          <span>Last child</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts----------------------------------->
+    <script>
+      // siblings() - return only 1 sibling
+      // next() - return next sibling
+      // nextAll() - return all next siblings
+      // nextUntil() - return upto next defined siblings
+      // prev() - return prev sibling
+      // prevAll() - return all prev siblings
+      // prevUntil() - return upto prev defined siblings
+
+      console.log($(".secondParent").siblings());
+      console.log($("h1").next());
+      console.log($("h1").nextAll());
+      console.log($("h1").nextUntil(".secondParent"));
+      console.log($("p").prev());
+      console.log($(".secondParent").prevAll());
+      console.log($(".secondParent").prevUntil("h1"));
+    </script>
+  </body>
+</html>

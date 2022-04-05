@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Get Html element's value or html</title>
+  </head>
+  <body>
+    <div class="parent">
+      <p>This is it.</p>
+    </div>
+    <input type="text" placeholder="Enter your Name - " class="text" />
+    <button class="btn">Submit</button>
+
+    <!-- Scripts -->
+    <script>
+        // Get Value of elements ---------------------------->
+        // text() - return the text Content
+        // html() - return the text Content with html tags
+        // val() - return the text Content of input elements
+        // attr(attributeName) - return the attribute value of an element
+        
+      function innerValue() {
+        return $(".parent").text();
+      }
+      function innerHtml() {
+        return $(".parent").html();
+      }
+      function innerText() {
+        return $(".text").val();
+      }
+      function getClassAttribute() {
+        return $("input").attr("class");
+      }
+
+      console.log(innerValue());
+      console.log(innerHtml());
+      $(".btn").click(() => {
+        console.log(innerText());
+      });
+      console.log(getClassAttribute());
+    </script>
+  </body>
+</html>

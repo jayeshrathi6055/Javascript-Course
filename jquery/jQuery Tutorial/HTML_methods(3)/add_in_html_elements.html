@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>add in html elements</title>
+  </head>
+  <body>
+    <div class="parent">
+      <p>This is it.</p>
+    </div>
+    <input type="text" placeholder="Enter your Name - " class="text" />
+
+    <!-- Scripts -->
+    <script>
+        // Get Value of elements ---------------------------->
+        // append(string|variable|function) - it can append element
+        // prepend(string|variable|function) - it can prepend element
+        // after(string|variable|function) - it can add after element
+        // before(string|variable|function) - it can add before element
+        
+      function appendText() {
+        $("p").append("append");
+      }
+      function prependText() {
+        $("p").prepend("prepend");
+      }
+      function afterText() {
+        $("p").after("after");
+      }
+      function beforeText() {
+        $("p").before("Before");
+      }
+      function createElement(){
+          let text = $("<p></p>").text("createElement");
+          $(".parent p").after(text);
+      }
+
+      appendText()
+      prependText()
+      afterText()
+      beforeText()
+      createElement()
+
+    </script>
+  </body>
+</html>

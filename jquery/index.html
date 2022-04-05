@@ -1,44 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JQuery Tutorial</title>
-    <script src="jquery-3.5.1.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        .container {
-            border: 2px solid red;
+        .class1{
+            background-color: aqua;
         }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1>jQuery Tutorial</h1>
-    <button class="continue"></button>
-    <a href="">Google</a>
-    <div class="container" id="container">
-        <ul>
-            <li>Unordered list</li>
-        </ul>
+  <body>
+    <h1>Welcome in jQuery tutorial</h1>
+
+    <p id="p1">Hide/Show Method</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <br /><br />
+
+    <p id="fade">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit
+      quo reiciendis voluptatum harum sit quibusdam cum vitae culpa aspernatur.
+    </p>
+    <button id="fadeout">FadeOut</button>
+    <button id="fadein">FadeIn</button>
+    <button id="fadetoggle">FadeToggle</button>
+    <button id="fadeto">FadeTo</button>
+
+    <br /><br />
+
+    <p id="slide">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officia
+      officiis consequuntur dicta et maxime nostrum perferendis, qui, soluta
+      mollitia hic nobis, deserunt exercitationem non at saepe. Soluta,
+      reiciendis obcaecati.
+    </p>
+    <button id="slideup">SlideUp</button>
+    <button id="slidedown">SlideDown</button>
+    <button id="slidetoggle">SlideToggle</button>
+
+    <br /><br />
+
+    <div id="animate">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem animi natus
+      aspernatur. Ratione repellat quod ipsam asperiores natus, soluta sit eaque
+      magni, delectus tempore rerum, dicta nihil itaque. Quos, ipsam!
     </div>
-    <div class="container1"></div>
-    <form action="">
-        <input type="text">
-        <input type="number">
-        <input type="date">
-    </form>
-    <div class="container2">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque nemo odit, temporibus explicabo eos asperiores molestias minima harum repudiandae eligendi ab exercitationem sit assumenda itaque amet unde ipsam deleniti expedita quibusdam magni blanditiis suscipit? Iure tempora qui odio illo harum quidem reiciendis debitis, vel quia atque alias consectetur nemo nulla in numquam necessitatibus error omnis distinctio? Veniam quisquam blanditiis fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos incidunt error eligendi eaque similique provident amet nulla maiores ut veritatis delectus, atque hic modi commodi numquam, deleniti quaerat voluptatibus sed quasi reiciendis aliquam. Ex explicabo libero sint sunt? Ullam vero molestias cum tenetur laudantium ex quis voluptate quidem sapiente!
+    <button id="animation">Animation</button>
+
+    <br /><br />
+
+    <p id="chain">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quia qui
+      excepturi animi voluptas fugit quis nesciunt, delectus autem
+      exercitationem corrupti vero ratione cupiditate a mollitia et consequuntur
+      fugiat dolorem quas perferendis ipsum consectetur odio. Esse voluptas
+      dignissimos explicabo sed!
+    </p>
+    <button id="chaining">Chain</button>
+
+    <br /><br />
+
+    <a href="www.google.com" id="attribute">Google</a>
+    <button id="attr">Get Attribute</button>
+
+    <br /><br />
+
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse" /></p>
+    <button id="text">Set Text</button>
+    <button id="html">Set HTML</button>
+    <button id="val">Set Value</button>
+
+    <br><br>
+
+    <p id="append">Use of </p>
+    <p id="prepend"> is use</p>
+    <p id="after">Use of </p>
+    <p id="before"> is use</p>
+    <button id="add">Add something</button>
+
+    <br><br>
+    
+    <div id="div1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum obcaecati veritatis magni iusto minus nam recusandae corrupti nihil quo distinctio repellendus, atque nostrum, architecto enim suscipit ab laudantium, temporibus voluptatum? Dolorem exercitationem at quaerat quam corrupti doloremque nesciunt ea debitis, modi quas dolor eaque expedita architecto dolorum veritatis numquam similique.</p>
     </div>
-    <button class="btn">Toggle</button>
-    <button class="btn1">Fade</button>
-    <button class="btn2">Slide</button>
-    <p>This is Jquery tutorial</p>
-    <p>This is Jquery tutorial</p>
-</body>
-<script src="index.js"></script>
-<script></script>
+    <button id="remove">Remove</button>
+
+    <br><br>
+
+    <div id="div2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum obcaecati veritatis magni iusto minus nam recusandae corrupti nihil quo distinctio repellendus, atque nostrum, architecto enim suscipit ab laudantium, temporibus voluptatum? Dolorem exercitationem at quaerat quam corrupti doloremque nesciunt ea debitis, modi quas dolor eaque expedita architecto dolorum veritatis numquam similique.</p>
+    </div>
+    <button id="empty">Empty</button>
+
+    <br><br>
+
+    <p id="class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum molestias exercitationem velit fugit repudiandae incidunt illum autem eveniet laudantium. Saepe iste dolore ut, ratione voluptates, blanditiis similique, animi accusantium aspernatur quasi earum. Dolorem ullam aut reiciendis asperiores natus accusantium itaque sint accusamus et autem? Sed, id iusto, quod quia dolorem non nam tempore, aut possimus ut magnam ratione suscipit rerum.</p>
+    <button id="addclass">Add Class</button>
+    <button id="removeclass">Remove Class</button>
+    <button id="toggleclass">Toggle Class</button>
+
+    <br><br>
+
+    <div id="div3"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <button id = "change">Change the Content</button>
+
+  </body>
+
+  <script>
+    // Basic Syntax of JQuery - $(selector).action()
+  </script>
+
+  <script>
+    // Types of Selector------------------------------->
+
+    // 1. Element Selector - $('p')
+    // 2. ID Selector - $('#id')
+    // 3. Class Selector - $('.class')
+    // 4. Other Selector - $("*"), $("p.intro"), $("p:first"), $("ul li:first")	, $("ul li:first-child"), $("[href]"), $("a[target='_blank']"), $("a[target!='_blank']"), $(":button"), $("tr:even"), $("tr:odd")
+  </script>
+
+  <script>
+    // Jquery basic Events - click, dblclick, mouseenter, mouseleave, mousedown, mouseup, hover, focus, blur and on.
+  </script>
+
+  <script>
+    // Hide/Show Method
+    $("#hide").on("click", function () {
+      $("#p1").hide(1000);
+    });
+    $("#show").on("click", function () {
+      $("#p1").show();
+    });
+    $("#toggle").on("click", function () {
+      $("#p1").toggle(1000);
+    });
+  </script>
+
+  <script>
+    // Fade Method
+    $("#fadeout").on("click", function () {
+      $("#fade").fadeOut();
+    });
+    $("#fadein").on("click", function () {
+      $("#fade").fadeIn(1000);
+    });
+    $("#fadetoggle").on("click", function () {
+      $("#fade").fadeToggle(1000);
+    });
+    $("#fadeto").on("click", function () {
+      $("#fade").fadeTo("slow", 0.7);
+    });
+  </script>
+
+  <script>
+    // Slide Method
+    $("#slideup").on("click", function () {
+      $("#slide").slideUp();
+    });
+    $("#slidedown").on("click", function () {
+      $("#slide").slideDown(1000);
+    });
+    $("#slidetoggle").on("click", function () {
+      $("#slide").slideToggle(1000);
+    });
+  </script>
+
+  <script>
+    $("#animation").on("click", () => {
+      $("#animate").animate(
+        { width: "600px", display: "inline", padding: "50px" },
+        2000
+      );
+    });
+  </script>
+
+  <script>
+    // Stop method - It will kill the current animation being performed on the selected element.
+  </script>
+
+  <script>
+    // jQuery chaining
+    $("#chaining").on("click", function () {
+      $("#chain")
+        .css({"background-color": "black", "color": "white"})
+        .slideUp(2000)
+        .slideDown(1000);
+    });
+  </script>
+
+  <script>
+    // JQuery HTML------------------------->
+
+    // 1. Get/Set attribute - attr()
+    $("#attr").on("click", () => {
+      alert($("#attribute").attr("href"));
+      $("#attribute").attr("href","https://www.facebook.com/");
+      $("#attribute").attr("target","_blank");
+    });
+
+    // 2. Set content - text(), html(), val()
+    $("#text").click(function () {
+      $("#test1").text("Hello world!");
+    });
+    $("#html").click(function () {
+      $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#val").click(function () {
+      $("#test3").val("Dolly Duck");
+    });
+
+    // 3. Add new HTML element
+    $("#add").on("click", ()=>{
+        $("#append").append("Append")
+        $("#prepend").prepend("Prepend")
+        $("#after").after("After<br>")
+        $("#before").before("<br>Before")
+    })
+
+    // 4. Remove HTML element
+    $("#remove").on("click", ()=>{$("#div1").remove()})  // It will remove parent/child element 
+    $("#empty").on("click", ()=>{$("#div2").empty()})   // It will empty child element but not remove
+
+    // 5. JQuery Classes
+    $("#addclass").on("click",()=>{$("#class").addClass("class1")})
+    $("#removeclass").on("click",()=>{$("#class").removeClass("class1")})
+    $("#toggleclass").on("click",()=>{$("#class").toggleClass("class1")})
+  </script>
+
+  <script>
+    //   Ancestors in jQuery - parent(), parents(), parentsUntil(argument)
+    //   Descendents in jQuery - children(), find()
+    // Siblings in jQuery - siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil()
+    // Filtering in jQuery - first(), last(), eq(), filter(), not().
+  </script>
+
+  <script>
+    //   Ajax in jQuery---------------------------->
+
+    // 1. load()
+    // $('#change').on("click",()=>{
+    //     $("#div3").load("test.txt");
+    // });
+    $('#change').on("click",()=>{
+        $("#div3").load("test.txt", function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+    });
+
+    // 2. get()
+    // 3. post()
+  </script>
 
 </html>

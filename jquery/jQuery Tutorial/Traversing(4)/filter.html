@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Traversal through filter</title>
+  </head>
+  <body>
+    <section class="parent">
+      <h1>Hello</h1>
+      <p>This is hello text</p>
+      <div class="secondParent">
+          <h2>Second Hello</h2>
+        <div class="thirdParent">
+          <p class="child">Traversal Through Filteration</p>
+          <span>Last child</span>
+        </div>
+      </div>
+    </section>
+
+    <article>
+        <section class="secondParent">This is last element</section>
+    </article>
+
+    <!-- Scripts----------------------------------->
+    <script>
+      // first() - return 1st specified element
+      // last() - return 2nd specified element
+      // eq() - return a element with a specified index number. Index number starts from 0.
+      // filter() - return filtered element
+      // not() - return except specified element
+
+      console.log($("div[class='secondParent']").first());
+      console.log($(".secondParent").last());
+      console.log($("p").eq(1));
+      console.log($("div").filter(".secondParent"));
+      console.log($("div").not(".parent"));
+    </script>
+  </body>
+</html>

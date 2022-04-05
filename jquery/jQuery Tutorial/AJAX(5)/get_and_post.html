@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Ajax load</title>
+</head>
+<body>
+    <h1 class="heading"></h1>
+    <div id = "#div">
+        <p id="p1"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Get Request
+        $.get("https://jsonplaceholder.typicode.com/todos/1",(res,status,xml)=>{
+            let {title} = res;
+            $(".heading").text(title);
+            console.log(res,status,xml)
+        })
+        // $.post("https://jsonplaceholder.typicode.com/posts/1",{
+        //     userId:1,
+        //     id:1,
+        //     title:"This is first title",
+        //     body:"Nothing to write"
+        // },(res,status)=>{
+        //     // let {title} = res;
+        //     // $("#p1").text(title);
+        //     console.log(res,status)
+        // })
+    </script>
+</body>
+</html>

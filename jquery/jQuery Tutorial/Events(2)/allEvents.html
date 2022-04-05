@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Events in jQuery</title>
+</head>
+<body>
+    <h1>See console for events</h1>
+    <input type="text" maxlength="10">
+
+    <!-- Scripts -->
+    <script>
+        // Events in jQuery--------------------------------------------------------------->
+// 1. mouse events = click, dblclick, mouseenter, mouseleave
+// 2. keyboard events = keypress, keydown, MediakeystatusMap
+// 3. form events = Submit, change, focus, blur
+// 4. document/window events = load, resize, scroll, unload
+
+// Example----------------------------------->
+$("h1").click(()=>{console.log("This is click Event.")});
+$("h1").mouseenter(()=>{console.log("This is mouseenter Event.")});
+$("input").keydown((e)=>{console.log("This is keydown Event.",e)});
+$("input").focus((e)=>{console.log("This is focus Event.",e)});
+$("input").blur((e)=>{console.log("This is blur Event.",e)});
+
+    </script>
+</body>
+</html>
